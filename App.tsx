@@ -1,12 +1,13 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
-import ClientCode from "./src/components/ClientCode";
+import ClientCodeInputText from "./src/components/inputText/clientCode/ClientCodeInputTextComponent";
+import ClientCodeList from "./src/components/flatList/clientCode";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <ClientCode />
-
+      <ClientCodeInputText />
+      <ClientCodeList />
       <StatusBar style="auto" />
     </View>
   );
