@@ -39,7 +39,4 @@ const style = StyleSheet.create({
     width: 230,
     height: 25,
   },
-  safeAreaContainer: {
-    flex: 1,
-  },
 });
