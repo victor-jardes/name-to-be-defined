@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, View, TextInput, StyleSheet } from "react-native";
-import { useClientCodeStore } from "../../../zustand/clientCodeStore";
-import IClientCodeInfos from "../../../types/IClientCodeInfos";
+import { useClientCodeStore } from "../../../../zustand/clientCodeStore";
+import IClientCodeInfos from "../../../../types/IClientCodeInfos";
 
 export default function ClientCodeInputTextComponent() {
   const clientCode = useClientCodeStore((state) => state.clientCode);

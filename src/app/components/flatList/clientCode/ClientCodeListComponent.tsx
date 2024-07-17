@@ -6,7 +6,7 @@ import {
   Text,
   View,
 } from "react-native";
-import { useClientCodeStore } from "../../../zustand/clientCodeStore";
+import { useClientCodeStore } from "../../../../zustand/clientCodeStore";
 
 export default function ClientCodeListComponent() {
   const listWithClientCodes = useClientCodeStore(
