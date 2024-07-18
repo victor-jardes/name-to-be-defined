@@ -17,7 +17,7 @@ export default function ClientCodeInputTextComponent() {
 
   return (
     <View>
-      <Text>Insert code, with containr 8 numbers</Text>
+      <Text>Insira o código de 8 digitos</Text>
       <TextInput
         style={style.TextInput}
         placeholder="XXXX-XXXX"
