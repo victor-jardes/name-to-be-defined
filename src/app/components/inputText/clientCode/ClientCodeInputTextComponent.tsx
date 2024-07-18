@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, View, TextInput, StyleSheet } from "react-native";
-import { useClientCodeStore } from "../../../zustand/clientCodeStore";
-import IClientCodeInfos from "../../../types/IClientCodeInfos";
+import { useClientCodeStore } from "../../../../zustand/clientCodeStore";
+import IClientCodeInfos from "../../../../types/IClientCodeInfos";
 
 export default function ClientCodeInputTextComponent() {
   const clientCode = useClientCodeStore((state) => state.clientCode);
@@ -17,7 +17,7 @@ export default function ClientCodeInputTextComponent() {
 
   return (
     <View>
-      <Text>Insert code, with containr 8 numbers</Text>
+      <Text>Insira o código de 8 digitos</Text>
       <TextInput
         style={style.TextInput}
         placeholder="XXXX-XXXX"

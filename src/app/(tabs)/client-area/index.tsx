@@ -1,9 +1,9 @@
+import ClientCodeInputText from "../../components/inputText/clientCode";
+import ClientCodeList from "../../components/flatList/clientCode";
+import { View, StyleSheet } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import ClientCodeInputText from "./src/components/inputText/clientCode/ClientCodeInputTextComponent";
-import ClientCodeList from "./src/components/flatList/clientCode";
 
-export default function App() {
+export default function ClientInfos() {
   return (
     <View style={styles.container}>
       <ClientCodeInputText />
@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",
-    justifyContent: "center",
+    // justifyContent: "center",
+    marginTop: 100,
   },
 });
