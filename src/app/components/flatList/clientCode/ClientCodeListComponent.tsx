@@ -1,14 +1,8 @@
-import {
-  FlatList,
-  Pressable,
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
+import { FlatList, SafeAreaView, StyleSheet, Text, View } from "react-native";
 import { useClientCodeStore } from "../../../../zustand/clientCodeStore";
+import { ButtonActionsList } from "./ButtonActionsList";
 
-export default function ClientCodeListComponent() {
+export const ListCodes = () => {
   const listWithClientCodes = useClientCodeStore(
     (state) => state.listWithClientCodes
   );
@@ -19,9 +13,26 @@ export default function ClientCodeListComponent() {
         renderItem={({ item }) => (
           <View>
             <Text>{item.clientCode}</Text>
-            <Pressable onPress={() => console.log("finished")}>
-              <Text style={style.pressableFinished}>FINISH</Text>
-            </Pressable>
+            <ButtonActionsList
+              iconName="check"
+              action={() => console.log("terminar")}
+            >
+              Finalizar
+            </ButtonActionsList>
+
+            <ButtonActionsList
+              iconName="remove"
+              action={() => console.log("remover")}
+            >
+              Remover
+            </ButtonActionsList>
+
+            <ButtonActionsList
+              iconName="content-copy"
+              action={() => console.log("copiado")}
+            >
+              Copy
+            </ButtonActionsList>
           </View>
         )}
         // extraData={listWithClientCodes}
@@ -29,13 +40,5 @@ export default function ClientCodeListComponent() {
       />
     </SafeAreaView>
   );
-}
+};
 
-const style = StyleSheet.create({
-  pressableFinished: {
-    borderColor: "black",
-    borderWidth: 2,
-    width: 54,
-    height: 20,
-  },
-});
