@@ -8,5 +8,9 @@ export const ClientCodeLabelInput = ({
   valor,
   ...rest
 }: clientCodeLabelInputProps) => {
-  return <Text {...rest}>{valor}</Text>;
+  return (
+    <Text className="text-xl" {...rest}>
+      {valor}
+    </Text>
+  );
 };

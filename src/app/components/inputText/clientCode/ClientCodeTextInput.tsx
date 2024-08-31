@@ -16,7 +16,7 @@ export const ClientCodeTextInputComponent = () => {
 
   return (
     <TextInput
-      style={style.TextInput}
+      className="border-black border-solid w-58 h-8 border-2 rounded placeholder:italic placeholder:text-slate-400 placeholder:text-center "
       placeholder="XXXX-XXXX"
       keyboardType="numeric"
       value={clientCode}
@@ -27,12 +27,3 @@ export const ClientCodeTextInputComponent = () => {
     />
   );
 };
-
-const style = StyleSheet.create({
-  TextInput: {
-    borderColor: "black",
-    borderWidth: 2,
-    width: 230,
-    height: 25,
-  },
-});
