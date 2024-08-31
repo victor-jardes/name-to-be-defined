@@ -24,15 +24,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "white",
     alignItems: "center",
-    // justifyContent: "center",
-
-    // alignItems: "center",
-
-    // justifyContent: "center",
     paddingVertical: 12,
-    // paddingHorizontal: 32,
-    // borderRadius: 4,
-    // elevation: 3,
-    // backgroundColor: "red",
   },
 });
