@@ -1,13 +1,19 @@
-import ClientCodeInputText from "../../components/inputText/clientCode";
-import ClientCodeList from "../../components/flatList/clientCode";
 import { View, StyleSheet } from "react-native";
 import { StatusBar } from "expo-status-bar";
+import { ClientCodeInfos } from "../../components/inputText/clientCode";
+import { ClientCodeListItens } from "../../components/flatList/clientCode";
 
 export default function ClientInfos() {
   return (
     <View style={styles.container}>
-      <ClientCodeInputText />
-      <ClientCodeList />
+      <ClientCodeInfos.RootTextInput>
+        <ClientCodeInfos.LabelTextInput valor="Digite o codigo de 8 digitos" />
+        <ClientCodeInfos.InsertTextInput />
+        <ClientCodeInfos.SendTextButton text="Adicionar" />
+      </ClientCodeInfos.RootTextInput>
+      <ClientCodeListItens.ListRootComponent>
+        <ClientCodeListItens.ListWithItens />
+      </ClientCodeListItens.ListRootComponent>
       <StatusBar style="auto" />
     </View>
   );
@@ -16,9 +22,8 @@ export default function ClientInfos() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "white",
     alignItems: "center",
-    // justifyContent: "center",
-    marginTop: 100,
+    paddingVertical: 12,
   },
 });

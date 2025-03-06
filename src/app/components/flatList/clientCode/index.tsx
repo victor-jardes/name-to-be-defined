@@ -1,5 +1,7 @@
-import ClientCodeListComponent from "./ClientCodeListComponent";
+import { ClientCodeListRootComponent } from "./ClientCodeRootComponent";
+import { ListCodes } from "./ClientCodeListComponent";
 
-export default function ClientCodeList() {
-  return <ClientCodeListComponent />;
-}
+export const ClientCodeListItens = {
+  ListWithItens: ListCodes,
+  ListRootComponent: ClientCodeListRootComponent,
+};
